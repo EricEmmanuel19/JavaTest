@@ -1,0 +1,33 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Frame2 extends JFrame {
+private JButton bt;
+	private boolean ho;
+private JLabel lo;
+	public Frame2(){
+	this.setTitle("Lecture");
+	this.lo=new JLabel();
+	this.setSize(400,200);
+	this.add(lo);
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ Lecture l=new Lecture();
+bt =new JButton("next");
+	this.add(bt);
+int i=0;
+	bt.addActionListener(new ActionListener(){
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+		
+			lo.setText((l.getAr()).get(i));
+			i++;
+		}});
+	this.setVisible(true);
+	}
+
+}

@@ -1,0 +1,28 @@
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class btPan extends JPanel {
+
+private String []l;
+private JLabel log;
+private GridLayout gl;
+public btPan(){
+gl=new GridLayout(3,7);
+		log=new JLabel("Panneau pour Button")	;
+String []l={"A","B","C","D","E","F","G","H","I","J",
+		"K","L","M","N","O","P","R","Q","S","T",
+		"U","V","W","X","Y"}	;
+this.setLayout(gl);
+JButton []bt = new JButton[l.length];
+for (int i=0;i<l.length;i++){
+	bt[i]=new JButton(l[i]);
+	this.add(bt[i]);
+	
+}
+
+}
+
+}

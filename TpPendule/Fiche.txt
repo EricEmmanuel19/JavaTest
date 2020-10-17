@@ -1,0 +1,7 @@
+hello
+Salut
+Bonjour
+Cava?
+quelle est votre nom?
+votre age?
+ou vous habiter?

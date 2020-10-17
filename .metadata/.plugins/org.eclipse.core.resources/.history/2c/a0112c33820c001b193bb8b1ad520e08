@@ -1,0 +1,23 @@
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class btPan extends JPanel {
+private JButton bt [];
+private String []l;
+private JLabel log;
+	public btPan(){
+bt[25] = new JButton();
+		log=new JLabel("Panneau pour Button")	;
+String []l={"A","B","C","D","E","F","G","H","I","J",
+		"K","L","M","N","O","P","R","Q","S","T",
+		"U","V","W","X","Y"}	;
+for (int i=0;i<=25;i++){
+	bt[i]=new JButton(l[i]);
+	this.add(bt[i]);
+	
+}
+
+}
+
+}

@@ -1,0 +1,86 @@
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JEditorPane;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+
+public class pan extends JPanel {
+private JMenuBar bar;
+private JMenu fich,apropo;
+private JMenuItem nouv,score,quiter,ai;
+private JLabel lab;
+private JScrollPane sc;
+private BorderLayout bod;
+private JEditorPane edi; 
+private JPanel ed;
+private JOptionPane jop;
+private JPanel pok;
+private JLabel aff;
+public pan(){
+pok=new JPanel();
+aff=new JLabel ();
+this.ed=new JPanel();
+Gp p=new Gp();
+this.jop=new JOptionPane();
+this.bod=new BorderLayout();
+	btPan ol=new btPan();
+this.setLayout(bod);
+	this.bar=new JMenuBar();
+	this.ai=new JMenuItem("?");
+	this.fich=new JMenu("Fichier")	;
+	this.apropo=new JMenu("Apropos");
+	this.nouv=new JMenuItem("Nouveau");
+	this.score=new  JMenuItem("Score");
+	this.quiter=new JMenuItem("quiter");
+	edi =new JEditorPane();
+	
+	apropo.add(ai);
+	bar.add(fich);
+	bar.add(apropo);
+	fich.add(nouv);
+	fich.add(score);
+	fich.add(quiter);
+edi.setEditable(false);
+this.sc=new JScrollPane();
+this.lab=new JLabel(" \t Bonjour a vous  et Soyez le Bienvenue dans notre Jeu ");
+//lab.setLocation(100,500);
+//edi.setText("");
+this.add(bod.NORTH,lab);
+pok.add(ol);
+aff.setText(pok.getT());
+this.add(pok,bod.SOUTH);
+
+ai.addActionListener(new ActionListener(){
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+	jop.showMessageDialog(null,"Ceci est une application developpe par Emmanuel Eric \n"
+			+ "  \t Le jeu consiste a trouvé les mot masqué \n"
+			+ " \t A chaque mot trouvé vous aurez 10 points !","",JOptionPane.INFORMATION_MESSAGE);
+		//System.exit(0);
+	}});
+
+io();
+	quiter.addActionListener(new ActionListener(){
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+		System.exit(0);
+			
+		}});
+
+	}
+	
+	JMenuBar io(){
+		
+		return bar;}
+	
+	
+}

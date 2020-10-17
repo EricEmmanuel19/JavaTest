@@ -1,0 +1,22 @@
+import javax.swing.JFrame;
+
+public class frame extends JFrame {
+public frame(){
+	pan p=new pan();
+	this.setSize(800,500);
+	this.setTitle("Tableau de pendule");
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//	this.setResizable(false);
+	this.setLocationRelativeTo(null);
+	this.setVisible(true);
+dia d=new dia(this,"Identité",true);
+
+//	p.io();
+	
+	this.setJMenuBar(p.io());
+	this.setContentPane(p);
+	
+}
+	
+	
+}

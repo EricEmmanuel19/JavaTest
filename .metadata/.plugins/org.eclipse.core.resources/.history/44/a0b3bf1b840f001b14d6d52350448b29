@@ -1,0 +1,9 @@
+import javax.swing.JFrame;
+
+public class Frame2 extends JFrame {
+public Frame2(){
+	this.setTitle("Lecture");
+	this.setSize(400,200);
+	
+}
+}

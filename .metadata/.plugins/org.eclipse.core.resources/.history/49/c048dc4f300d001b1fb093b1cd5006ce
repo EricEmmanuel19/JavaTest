@@ -1,0 +1,63 @@
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class btPan extends JPanel {
+
+private String []l;
+private JLabel log;
+private GridLayout gl;
+private String mot;
+private String k="";
+private Label ecris;
+
+public btPan(){
+
+	ecris =new Label();
+
+	
+	gl=new GridLayout(3,7);
+		log=new JLabel("Panneau pour Button")	;
+String []l={"A","B","C","D","E","F","G","H","I","J",
+		"K","L","M","N","O","P","R","Q","S","T",
+		"U","V","W","X","Y"}	;
+this.setLayout(gl);
+JButton []bt = new JButton[l.length];
+for (int i=0;i<l.length;i++){
+	bt[i]=new JButton(l[i]);
+	bt[i].addActionListener(new list());
+	this.add(bt[i]);
+	
+	this.add(lo);}	
+
+}class list implements ActionListener{
+
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent a) {
+		String op=a.getActionCommand();
+		k=k+op;
+		setT(op);
+		getT();
+	
+		System.out.println(k );
+		ecris.setlabel(k);
+
+	}	
+}
+
+void setT (String af){
+	this.mot=af;
+	
+}
+String getT(){
+	return mot;
+	
+}
+}

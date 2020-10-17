@@ -1,0 +1,16 @@
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+
+public class dia extends JDialog {
+
+	public dia(JFrame par,String titr,boolean  m){
+		super(par,titr,m);
+		this.setSize(300,200);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+	this.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+	}
+	
+	
+}

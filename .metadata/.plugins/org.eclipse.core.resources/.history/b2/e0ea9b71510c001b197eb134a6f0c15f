@@ -1,0 +1,15 @@
+import javax.swing.JFrame;
+
+public class frame extends JFrame {
+public frame(){
+	this.setSize(800,500);
+	this.setTitle("Tableau de pendule");
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	this.setResizable(false);
+	this.setVisible(true);
+	
+	
+}
+	
+	
+}

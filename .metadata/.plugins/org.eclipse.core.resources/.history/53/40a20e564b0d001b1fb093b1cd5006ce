@@ -1,0 +1,57 @@
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class dia extends JDialog {
+private JPanel panN,panP,panS,panB;
+private JLabel n,p,s;
+private JComboBox sx;
+private JTextField nom,prenom;
+private JButton ok ,an;
+//private String [] sex;
+public dia(JFrame par,String titr,boolean  m){
+	super(par,titr,m);
+		this.setSize(400,200);
+		init();
+		this.setResizable(false);
+	//	this.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+
+}
+	void init(){
+		String []sex ={"Homme","Femme"};
+	sx=new JComboBox(sex);
+n=new JLabel("Nom :");
+p=new JLabel("Prenom :");
+s=new JLabel("Sex :");
+nom=new JTextField();
+prenom=new JTextField();
+ok =new JButton ("Enregistré ");
+an=new JButton("Annuler");
+panN=new JPanel();
+panN.add(n);
+panN.add(nom);
+panP=new JPanel();
+panP.add(p);
+panP.add(prenom);
+	panS=new JPanel();
+	panS.add(s);
+	panS.add(sx);
+	panB=new JPanel();
+	panB.add(ok);
+	panB.add(an);
+	this.setLayout(new GridLayout(4,0));
+	this.add(panN);
+	this.add(panP);
+	this.add(panS);
+	this.add(panB);
+	}
+	
+}

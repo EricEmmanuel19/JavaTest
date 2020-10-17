@@ -1,0 +1,16 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Frame2 extends JFrame {
+private JButton bt;
+	public Frame2(){
+	this.setTitle("Lecture");
+	this.setSize(400,200);
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+bt =new JButton("next");
+	this.add(bt);
+	this.setVisible(true);
+	}
+
+}
